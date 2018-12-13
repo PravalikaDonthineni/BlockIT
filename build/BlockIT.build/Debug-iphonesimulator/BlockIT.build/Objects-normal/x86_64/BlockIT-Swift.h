@@ -247,15 +247,18 @@ SWIFT_CLASS("_TtC7BlockIT10SharedFile")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIImagePickerController;
 
 SWIFT_CLASS("_TtC7BlockIT20SignUpViewController")
-@interface SignUpViewController : UIViewController
+@interface SignUpViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified email;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified password;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified profilePicture;
 - (IBAction)uploadImage:(UIButton * _Nonnull)sender;
 - (IBAction)submitButton:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+- (void)imagePickerControllerDidCancel:(UIImagePickerController * _Nonnull)picker;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
