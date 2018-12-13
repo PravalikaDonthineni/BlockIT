@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 class SignUpViewController: UIViewController {
 
@@ -24,7 +23,6 @@ class SignUpViewController: UIViewController {
             guard let email = email.text, let password = password.text else {
                 return
             }
-            save(emailValue: email, passwordValue: password)
             performSegue(withIdentifier: "sinupPushLoginSegue", sender: nil)
         }
     }
@@ -35,18 +33,5 @@ class SignUpViewController: UIViewController {
         email.becomeFirstResponder()
     }
     
-    func save(emailValue: String, passwordValue : String) {
-        let managedContext = PersistenceService.context
-        guard let entity = NSEntityDescription.entity(forEntityName: "UserDetails",
-                                                      in: managedContext) else {return}
-        let user = NSManagedObject(entity: entity, insertInto: managedContext)
-        user.setValue(email.text, forKeyPath: "email")
-        user.setValue(password.text, forKeyPath: "password")
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-    }
 
 }

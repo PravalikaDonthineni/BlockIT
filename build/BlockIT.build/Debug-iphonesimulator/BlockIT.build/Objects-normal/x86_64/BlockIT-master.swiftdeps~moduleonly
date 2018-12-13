@@ -1,11 +1,10 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
 options: "116fc6597513a1f42b691b9c111afef0"
-build_time: [1544676779, 994165000]
+build_time: [1544732355, 699964000]
 inputs:
-  "/Users/pravalika/Desktop/BlockIT/BlockIT/SignUpViewController.swift": [1544676779, 0]
-  "/Users/pravalika/Desktop/BlockIT/BlockIT/PersistenceService.swift": [1544674655, 0]
+  "/Users/pravalika/Desktop/BlockIT/BlockIT/SignUpViewController.swift": [1544732351, 0]
   "/Users/pravalika/Desktop/BlockIT/BlockIT/MainViewController.swift": [1544562064, 0]
   "/Users/pravalika/Desktop/BlockIT/BlockIT/SharedFile.swift": [1544561015, 0]
-  "/Users/pravalika/Desktop/BlockIT/BlockIT/ListViewController.swift": [1544675505, 0]
-  "/Users/pravalika/Desktop/BlockIT/BlockIT/LoginViewController.swift": [1544562770, 0]
-  "/Users/pravalika/Desktop/BlockIT/BlockIT/AppDelegate.swift": [1544674164, 0]
+  "/Users/pravalika/Desktop/BlockIT/BlockIT/ListViewController.swift": [1544732326, 0]
+  "/Users/pravalika/Desktop/BlockIT/BlockIT/LoginViewController.swift": [1544732324, 0]
+  "/Users/pravalika/Desktop/BlockIT/BlockIT/AppDelegate.swift": [1544732330, 0]

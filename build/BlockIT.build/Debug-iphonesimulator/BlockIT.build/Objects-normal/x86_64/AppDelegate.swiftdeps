@@ -17,14 +17,12 @@ depends-top-level:
 - "AppDelegate"
 - "Bool"
 - !private "BooleanLiteralType"
-- !private "PersistenceService"
 - "UIApplication"
 - "UIApplicationDelegate"
 - "UIResponder"
 - "UIWindow"
 depends-member:
 - ["7BlockIT11AppDelegateC", "Bool"]
-- !private ["7BlockIT11AppDelegateC", "PersistenceService"]
 - ["7BlockIT11AppDelegateC", "UIApplication"]
 - ["7BlockIT11AppDelegateC", "UIWindow"]
 - ["7BlockIT11AppDelegateC", "application"]
@@ -43,7 +41,6 @@ depends-member:
 - ["7BlockIT11AppDelegateC", "init"]
 - ["7BlockIT11AppDelegateC", "window"]
 - ["s7CVarArgP", "LaunchOptionsKey"]
-- !private ["s7CVarArgP", "PersistenceService"]
 - ["s7CVarArgP", ""]
 - ["s7CVarArgP", "application"]
 - ["s7CVarArgP", "applicationDidBecomeActive"]
@@ -61,7 +58,6 @@ depends-member:
 - !private ["s7CVarArgP", "init"]
 - ["s7CVarArgP", "window"]
 - ["s28CustomDebugStringConvertibleP", "LaunchOptionsKey"]
-- !private ["s28CustomDebugStringConvertibleP", "PersistenceService"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - ["s28CustomDebugStringConvertibleP", "application"]
 - ["s28CustomDebugStringConvertibleP", "applicationDidBecomeActive"]
@@ -79,7 +75,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "window"]
 - ["s23CustomStringConvertibleP", "LaunchOptionsKey"]
-- !private ["s23CustomStringConvertibleP", "PersistenceService"]
 - ["s23CustomStringConvertibleP", ""]
 - ["s23CustomStringConvertibleP", "application"]
 - ["s23CustomStringConvertibleP", "applicationDidBecomeActive"]
@@ -97,7 +92,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "window"]
 - ["SQ", "LaunchOptionsKey"]
-- !private ["SQ", "PersistenceService"]
 - ["SQ", ""]
 - ["SQ", "application"]
 - ["SQ", "applicationDidBecomeActive"]
@@ -115,7 +109,6 @@ depends-member:
 - !private ["SQ", "init"]
 - ["SQ", "window"]
 - ["SH", "LaunchOptionsKey"]
-- !private ["SH", "PersistenceService"]
 - ["SH", ""]
 - ["SH", "application"]
 - ["SH", "applicationDidBecomeActive"]
@@ -134,7 +127,6 @@ depends-member:
 - ["SH", "window"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "LaunchOptionsKey"]
-- !private ["So8NSObjectC", "PersistenceService"]
 - ["So8NSObjectC", "UIApplication"]
 - ["So8NSObjectC", "UIWindow"]
 - ["So8NSObjectC", "application"]
@@ -153,7 +145,6 @@ depends-member:
 - !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "window"]
 - ["So8NSObjectP", "LaunchOptionsKey"]
-- !private ["So8NSObjectP", "PersistenceService"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "application"]
 - ["So8NSObjectP", "applicationDidBecomeActive"]
@@ -170,9 +161,7 @@ depends-member:
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "window"]
-- !private ["7BlockIT18PersistenceServiceC", "saveContext"]
 - ["So13UIApplicationC", "LaunchOptionsKey"]
-- !private ["So21UIApplicationDelegateP", "PersistenceService"]
 - ["So21UIApplicationDelegateP", ""]
 - ["So21UIApplicationDelegateP", "application"]
 - ["So21UIApplicationDelegateP", "applicationDidBecomeActive"]
@@ -188,7 +177,6 @@ depends-member:
 - ["So21UIApplicationDelegateP", "applicationWillTerminate"]
 - ["So21UIApplicationDelegateP", "window"]
 - ["So30UIPasteConfigurationSupportingP", "LaunchOptionsKey"]
-- !private ["So30UIPasteConfigurationSupportingP", "PersistenceService"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - ["So30UIPasteConfigurationSupportingP", "application"]
 - ["So30UIPasteConfigurationSupportingP", "applicationDidBecomeActive"]
@@ -207,7 +195,6 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "window"]
 - ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "LaunchOptionsKey"]
-- !private ["So11UIResponderC", "PersistenceService"]
 - ["So11UIResponderC", "UIApplication"]
 - ["So11UIResponderC", "UIWindow"]
 - ["So11UIResponderC", ""]
@@ -227,7 +214,6 @@ depends-member:
 - !private ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "window"]
 - ["So30UIResponderStandardEditActionsP", "LaunchOptionsKey"]
-- !private ["So30UIResponderStandardEditActionsP", "PersistenceService"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - ["So30UIResponderStandardEditActionsP", "application"]
 - ["So30UIResponderStandardEditActionsP", "applicationDidBecomeActive"]
@@ -245,7 +231,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - ["So30UIResponderStandardEditActionsP", "window"]
 - ["So23UIUserActivityRestoringP", "LaunchOptionsKey"]
-- !private ["So23UIUserActivityRestoringP", "PersistenceService"]
 - ["So23UIUserActivityRestoringP", ""]
 - ["So23UIUserActivityRestoringP", "application"]
 - ["So23UIUserActivityRestoringP", "applicationDidBecomeActive"]
@@ -263,7 +248,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "init"]
 - ["So23UIUserActivityRestoringP", "window"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "LaunchOptionsKey"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "PersistenceService"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - ["10Foundation27_KeyValueCodingAndObservingP", "application"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidBecomeActive"]
@@ -289,7 +273,6 @@ depends-nominal:
 - "SH"
 - "So8NSObjectC"
 - "So8NSObjectP"
-- !private "7BlockIT18PersistenceServiceC"
 - "So13UIApplicationC"
 - "So21UIApplicationDelegateP"
 - "So30UIPasteConfigurationSupportingP"
@@ -325,4 +308,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "f54e3e5be72178e952b78ca19500ffc2"
+interface-hash: "5389ad5ba722da83a8ab43fc5ab29497"

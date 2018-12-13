@@ -12,11 +12,9 @@
 		E303951A21BB3F8E00DDFFD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E303951821BB3F8E00DDFFD1 /* Main.storyboard */; };
 		E303951C21BB3F9000DDFFD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E303951B21BB3F9000DDFFD1 /* Assets.xcassets */; };
 		E303951F21BB3F9000DDFFD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E303951D21BB3F9000DDFFD1 /* LaunchScreen.storyboard */; };
-		E317286221C2113100645B38 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E317286121C2113100645B38 /* PersistenceService.swift */; };
 		E3A6991521C01C40002F0F09 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6991421C01C40002F0F09 /* SignUpViewController.swift */; };
 		E3A6991921C020B1002F0F09 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6991821C020B1002F0F09 /* ListViewController.swift */; };
 		E3A6991D21C02B80002F0F09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6991C21C02B80002F0F09 /* LoginViewController.swift */; };
-		E3A6992421C03F32002F0F09 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3A6992221C03F32002F0F09 /* CoreData.xcdatamodeld */; };
 		E3A6992621C058CF002F0F09 /* SharedFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6992521C058CF002F0F09 /* SharedFile.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,11 +26,9 @@
 		E303951B21BB3F9000DDFFD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E303951E21BB3F9000DDFFD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E303952021BB3F9000DDFFD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E317286121C2113100645B38 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		E3A6991421C01C40002F0F09 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E3A6991821C020B1002F0F09 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		E3A6991C21C02B80002F0F09 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		E3A6992321C03F32002F0F09 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		E3A6992521C058CF002F0F09 /* SharedFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,9 +71,7 @@
 				E3A6991421C01C40002F0F09 /* SignUpViewController.swift */,
 				E3A6991821C020B1002F0F09 /* ListViewController.swift */,
 				E3A6991C21C02B80002F0F09 /* LoginViewController.swift */,
-				E3A6992221C03F32002F0F09 /* CoreData.xcdatamodeld */,
 				E3A6992521C058CF002F0F09 /* SharedFile.swift */,
-				E317286121C2113100645B38 /* PersistenceService.swift */,
 			);
 			path = BlockIT;
 			sourceTree = "<group>";
@@ -154,10 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A6991521C01C40002F0F09 /* SignUpViewController.swift in Sources */,
-				E317286221C2113100645B38 /* PersistenceService.swift in Sources */,
 				E303951721BB3F8E00DDFFD1 /* MainViewController.swift in Sources */,
 				E3A6992621C058CF002F0F09 /* SharedFile.swift in Sources */,
-				E3A6992421C03F32002F0F09 /* CoreData.xcdatamodeld in Sources */,
 				E3A6991921C020B1002F0F09 /* ListViewController.swift in Sources */,
 				E3A6991D21C02B80002F0F09 /* LoginViewController.swift in Sources */,
 				E303951521BB3F8E00DDFFD1 /* AppDelegate.swift in Sources */,
@@ -360,19 +352,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E3A6992221C03F32002F0F09 /* CoreData.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E3A6992321C03F32002F0F09 /* CoreData.xcdatamodel */,
-			);
-			currentVersion = E3A6992321C03F32002F0F09 /* CoreData.xcdatamodel */;
-			path = CoreData.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E303950921BB3F8E00DDFFD1 /* Project object */;
 }
