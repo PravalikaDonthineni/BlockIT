@@ -77,7 +77,7 @@
         <!--Login View Controller-->
         <scene sceneID="VWM-Sc-Nvc">
             <objects>
-                <viewController storyboardIdentifier="LoginID" id="kPc-ds-mFg" customClass="LoginViewController" customModule="BlockIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="kPc-ds-mFg" customClass="LoginViewController" customModule="BlockIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eem-2i-pNn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +112,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cJD-ee-TKX" kind="show" identifier="listSegue" id="oVD-kZ-s2T"/>
+                                    <action selector="btnLoginClicked:" destination="kPc-ds-mFg" eventType="touchUpInside" id="pBX-Sb-fse"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqw-9I-5vk">
@@ -122,7 +122,6 @@
                                 </state>
                                 <connections>
                                     <action selector="donthaveAccount:" destination="kPc-ds-mFg" eventType="touchUpInside" id="nHv-1U-4Qw"/>
-                                    <segue destination="W6l-Vm-oR3" kind="show" identifier="dontHaveAccountSegue" id="wKi-Wc-6ze"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -157,7 +156,7 @@
         <!--SignUp-->
         <scene sceneID="N76-qR-i2N">
             <objects>
-                <viewController storyboardIdentifier="SignupID" id="W6l-Vm-oR3" customClass="SignUpViewController" customModule="BlockIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="W6l-Vm-oR3" customClass="SignUpViewController" customModule="BlockIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PK3-xt-V8R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +210,6 @@
                                 </state>
                                 <connections>
                                     <action selector="submitButton:" destination="W6l-Vm-oR3" eventType="touchUpInside" id="BEp-Ju-AtT"/>
-                                    <segue destination="kPc-ds-mFg" kind="show" identifier="sinupPushLoginSegue" id="eEl-Lj-GwG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -251,7 +249,7 @@
         <!--List View Controller-->
         <scene sceneID="WkL-4L-mHB">
             <objects>
-                <viewController storyboardIdentifier="ListID" id="cJD-ee-TKX" customClass="ListViewController" customModule="BlockIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListViewController" id="cJD-ee-TKX" customClass="ListViewController" customModule="BlockIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Udj-T9-CWn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,7 +261,7 @@
                                     <constraint firstAttribute="height" constant="527" id="Tpv-ZQ-n7E"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ogD-Ns-dDz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="ogD-Ns-dDz">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ogD-Ns-dDz" id="0Ve-3L-zNy">
@@ -330,8 +328,4 @@
             <point key="canvasLocation" x="2844" y="26"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="wKi-Wc-6ze"/>
-        <segue reference="eEl-Lj-GwG"/>
-    </inferredMetricsTieBreakers>
 </document>

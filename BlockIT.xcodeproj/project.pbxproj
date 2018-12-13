@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CCEBB9021C30F6800247662 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCEBB8F21C30F6800247662 /* User.swift */; };
+		4CCEBB9321C3230800247662 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCEBB9221C3230800247662 /* UIAlertController+Extension.swift */; };
 		E303951521BB3F8E00DDFFD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E303951421BB3F8E00DDFFD1 /* AppDelegate.swift */; };
 		E303951721BB3F8E00DDFFD1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E303951621BB3F8E00DDFFD1 /* MainViewController.swift */; };
 		E303951A21BB3F8E00DDFFD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E303951821BB3F8E00DDFFD1 /* Main.storyboard */; };
@@ -15,10 +17,11 @@
 		E3A6991521C01C40002F0F09 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6991421C01C40002F0F09 /* SignUpViewController.swift */; };
 		E3A6991921C020B1002F0F09 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6991821C020B1002F0F09 /* ListViewController.swift */; };
 		E3A6991D21C02B80002F0F09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6991C21C02B80002F0F09 /* LoginViewController.swift */; };
-		E3A6992621C058CF002F0F09 /* SharedFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6992521C058CF002F0F09 /* SharedFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CCEBB8F21C30F6800247662 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4CCEBB9221C3230800247662 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		E303951121BB3F8E00DDFFD1 /* BlockIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E303951421BB3F8E00DDFFD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E303951621BB3F8E00DDFFD1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -29,7 +32,6 @@
 		E3A6991421C01C40002F0F09 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E3A6991821C020B1002F0F09 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		E3A6991C21C02B80002F0F09 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		E3A6992521C058CF002F0F09 /* SharedFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CCEBB8E21C30F4C00247662 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CCEBB8F21C30F6800247662 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4CCEBB9121C322E100247662 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4CCEBB9221C3230800247662 /* UIAlertController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4CCEBB9421C3271E00247662 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3A6991C21C02B80002F0F09 /* LoginViewController.swift */,
+				E3A6991821C020B1002F0F09 /* ListViewController.swift */,
+				E3A6991421C01C40002F0F09 /* SignUpViewController.swift */,
+				E303951621BB3F8E00DDFFD1 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		E303950821BB3F8E00DDFFD1 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +91,14 @@
 		E303951321BB3F8E00DDFFD1 /* BlockIT */ = {
 			isa = PBXGroup;
 			children = (
+				4CCEBB9421C3271E00247662 /* Controllers */,
+				4CCEBB8E21C30F4C00247662 /* Model */,
+				4CCEBB9121C322E100247662 /* Extensions */,
 				E303951421BB3F8E00DDFFD1 /* AppDelegate.swift */,
-				E303951621BB3F8E00DDFFD1 /* MainViewController.swift */,
 				E303951821BB3F8E00DDFFD1 /* Main.storyboard */,
 				E303951B21BB3F9000DDFFD1 /* Assets.xcassets */,
 				E303951D21BB3F9000DDFFD1 /* LaunchScreen.storyboard */,
 				E303952021BB3F9000DDFFD1 /* Info.plist */,
-				E3A6991421C01C40002F0F09 /* SignUpViewController.swift */,
-				E3A6991821C020B1002F0F09 /* ListViewController.swift */,
-				E3A6991C21C02B80002F0F09 /* LoginViewController.swift */,
-				E3A6992521C058CF002F0F09 /* SharedFile.swift */,
 			);
 			path = BlockIT;
 			sourceTree = "<group>";
@@ -149,10 +176,11 @@
 			files = (
 				E3A6991521C01C40002F0F09 /* SignUpViewController.swift in Sources */,
 				E303951721BB3F8E00DDFFD1 /* MainViewController.swift in Sources */,
-				E3A6992621C058CF002F0F09 /* SharedFile.swift in Sources */,
+				4CCEBB9321C3230800247662 /* UIAlertController+Extension.swift in Sources */,
 				E3A6991921C020B1002F0F09 /* ListViewController.swift in Sources */,
 				E3A6991D21C02B80002F0F09 /* LoginViewController.swift in Sources */,
 				E303951521BB3F8E00DDFFD1 /* AppDelegate.swift in Sources */,
+				4CCEBB9021C30F6800247662 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

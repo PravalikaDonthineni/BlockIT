@@ -14,6 +14,12 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var profilePicture: UIImageView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        profilePicture.image = #imageLiteral(resourceName: "profilepic")
+        email.becomeFirstResponder()
+    }
+    
     @IBAction func uploadImage(_ sender: UIButton) {
         
         //code for image picker
@@ -55,19 +61,24 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func submitButton(_ sender: UIButton) {
         if email.text?.isEmpty ?? true && password.text?.isEmpty ?? true {
-            SharedFile.showAlert(msg: "Please enter the email and Password", title: "Text Fields cannot be empty", viewcontroller: self)
+            UIAlertController.getAlertView("Error", message: "Text fields cannot be empty. Please enter the email and password").show(self)
         } else {
-//            guard let email = email.text, let password = password.text else {
-//                return
-//            }
-            performSegue(withIdentifier: "sinupPushLoginSegue", sender: nil)
+            if let email = email.text, let pwd = password.text {
+                // check if the entered details are already registered or not.
+                if let _ = UserProfileCache.get(cacheKey: email + pwd) {
+                    UIAlertController.getAlertView("Already Registered", message: "The email address you have entered is already registred. Please sign in with your registered email & password.", cancelButtonTitle: "Ok") { (action) in
+                        self.dismiss(animated: true, completion: nil)
+                    }.show(self)
+                } else {
+                    // if not registered, register the user and save the details in cache
+                    let user = User(userName: email, password: pwd, urls: [])
+                    UserProfileCache.save(user)
+                    UIAlertController.getAlertView("Success", message: "You have been successfully registered.", cancelButtonTitle: "Ok") { (action) in
+                        self.dismiss(animated: true, completion: nil)
+                        }.show(self)
+                }
+            }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        profilePicture.image = #imageLiteral(resourceName: "profilepic")
-        email.becomeFirstResponder()
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
