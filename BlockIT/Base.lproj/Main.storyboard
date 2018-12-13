@@ -211,6 +211,7 @@
                                 </state>
                                 <connections>
                                     <action selector="submitButton:" destination="W6l-Vm-oR3" eventType="touchUpInside" id="BEp-Ju-AtT"/>
+                                    <segue destination="kPc-ds-mFg" kind="show" identifier="sinupPushLoginSegue" id="eEl-Lj-GwG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -331,5 +332,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="wKi-Wc-6ze"/>
+        <segue reference="eEl-Lj-GwG"/>
     </inferredMetricsTieBreakers>
 </document>

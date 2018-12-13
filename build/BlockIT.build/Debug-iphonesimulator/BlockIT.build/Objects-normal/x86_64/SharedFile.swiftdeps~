@@ -113,7 +113,6 @@ depends-member:
 - !private ["7BlockIT10SharedFileC", "UIAlertAction"]
 - !private ["7BlockIT10SharedFileC", "UIAlertController"]
 - ["7BlockIT10SharedFileC", "UIViewController"]
-- ["7BlockIT10SharedFileC", "deinit"]
 - ["7BlockIT10SharedFileC", "init"]
 - ["7BlockIT10SharedFileC", "showAlert"]
 - !private ["SS", "init"]

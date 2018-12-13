@@ -118,7 +118,7 @@ depends-member:
 - ["7BlockIT18PersistenceServiceC", "NSPersistentContainer"]
 - ["7BlockIT18PersistenceServiceC", "context"]
 - ["7BlockIT18PersistenceServiceC", "fatalError"]
-- !private ["7BlockIT18PersistenceServiceC", "init"]
+- ["7BlockIT18PersistenceServiceC", "init"]
 - ["7BlockIT18PersistenceServiceC", "persistentContainer"]
 - ["7BlockIT18PersistenceServiceC", "saveContext"]
 - ["Sm", "init"]
@@ -232,4 +232,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "0f90595565aa22f568b45fc563e18660"
+interface-hash: "5b11f918fd02b095d3bd0c7875a97151"

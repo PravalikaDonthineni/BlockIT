@@ -19,6 +19,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        fetch()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,24 +37,35 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         guard let domain = enterDomain.text else {
             return
         }
-        save(name: domain)
+        save(domain)
         tableView.reloadData()
+        enterDomain?.text = ""
     }
     
-    func save(name: String) {
+    func save(_ name: String) {
+        let managedContext = PersistenceService.context
+        guard let entity = NSEntityDescription.entity(forEntityName: "WebsiteNames",
+                                                      in: managedContext) else {return}
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "WebsiteNames", in: managedContext)!
         let domain = NSManagedObject(entity: entity, insertInto: managedContext)
-        domain.setValue(domain, forKeyPath: "domain")
+        domain.setValue(enterDomain?.text, forKeyPath: "domain")
         do {
             try managedContext.save()
             domainNames.append(domain)
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func fetch() {
+        let managedContext = PersistenceService.context
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "WebsiteNames")
+        do {
+             let domainnames = try managedContext.fetch(fetchRequest)
+             self.domainNames = domainnames
+             self.tableView.reloadData()
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
 }

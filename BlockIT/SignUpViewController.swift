@@ -21,10 +21,11 @@ class SignUpViewController: UIViewController {
         if email.text?.isEmpty ?? true && password.text?.isEmpty ?? true {
             SharedFile.showAlert(msg: "Please enter the email and Password", title: "Text Fields cannot be empty", viewcontroller: self)
         } else {
-//            let newUser = UserDetails(context: PersistenceService.context)
-//            newUser.setValue(email.text, forKey: "email")
-//            newUser.setValue(password.text, forKey: "password")
-            
+            guard let email = email.text, let password = password.text else {
+                return
+            }
+            save(emailValue: email, passwordValue: password)
+            performSegue(withIdentifier: "sinupPushLoginSegue", sender: nil)
         }
     }
     
@@ -32,6 +33,20 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         profilePicture.image = #imageLiteral(resourceName: "profilepic")
         email.becomeFirstResponder()
+    }
+    
+    func save(emailValue: String, passwordValue : String) {
+        let managedContext = PersistenceService.context
+        guard let entity = NSEntityDescription.entity(forEntityName: "UserDetails",
+                                                      in: managedContext) else {return}
+        let user = NSManagedObject(entity: entity, insertInto: managedContext)
+        user.setValue(email.text, forKeyPath: "email")
+        user.setValue(password.text, forKeyPath: "password")
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
 
 }
